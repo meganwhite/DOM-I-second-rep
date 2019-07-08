@@ -68,5 +68,7 @@ renderElements(siteContent.footer,'footer');
 // Add images to page
 const ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src',siteContent['cta']['img-src']);
+const middleImage = document.getElementById('middle-img');
+middleImage.setAttribute('src',siteContent['main-content']['middle-img-src']);
 
 
