@@ -47,6 +47,9 @@ const createID = (className, id) => {
 }
 
 createID('nav','top-nav');
+createID('.cta-text','ctaText');
+createID('.contact','contact');
+createID('footer','footer');
 
 // Add content to elements using parents' IDs
 const renderElements = (obj, id) => {
@@ -58,5 +61,8 @@ const renderElements = (obj, id) => {
 }
 
 renderElements(siteContent.nav,'top-nav');
+renderElements(siteContent.cta,'ctaText');
+renderElements(siteContent.contact,'contact');
+renderElements(siteContent.footer,'footer');
 
 
