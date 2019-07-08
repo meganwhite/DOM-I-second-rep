@@ -72,3 +72,28 @@ const middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('src',siteContent['main-content']['middle-img-src']);
 
 
+// Add main text content to page
+let mainContent = siteContent['main-content'];
+delete mainContent['middle-img-src'];
+
+let mainContentValues = Object.values(mainContent);
+let mainContentValuesHeadings = [];
+let mainContentValuesContent = [];
+
+for (i = 0; i < mainContentValues.length; i++) {
+  if(i%2 === 0) {
+    mainContentValuesHeadings.push(mainContentValues[i]);
+  }
+  else {
+    mainContentValuesContent.push(mainContentValues[i]);
+  }
+}
+
+for (i = 0; i < mainContentValuesHeadings.length; i++) {
+  let h4 = document.querySelectorAll('h4');
+  let p = document.querySelectorAll('p');
+  h4[i].innerHTML = mainContentValuesHeadings[i];
+  p[i].innerHTML = mainContentValuesContent[i];
+}
+
+
