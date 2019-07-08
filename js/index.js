@@ -69,6 +69,19 @@ renderElements(siteContent.footer,'footer');
 let heading = document.querySelector('h1');
 heading.innerHTML = "DOM<br>Is<br>Awesome"
 
+// Add new content to nav bar
+let navBar = document.querySelector('nav');
+let navItems = document.querySelectorAll('a');
+navItems.forEach(item => item.style.color = 'green');
+let node1 = document.createElement('a');
+node1.textContent = "Gallery";
+node1.style.color = "green";
+let node2 = document.createElement('a');
+node2.textContent = "Danger!";
+navBar.appendChild(node1);
+navBar.prepend(node2);
+node2.style.color = "green";
+
 // Add images to page
 const ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src',siteContent['cta']['img-src']);
