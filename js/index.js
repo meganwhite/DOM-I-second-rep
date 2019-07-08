@@ -65,6 +65,10 @@ renderElements(siteContent.cta,'ctaText');
 renderElements(siteContent.contact,'contact');
 renderElements(siteContent.footer,'footer');
 
+// Add spacing to main heading
+let heading = document.querySelector('h1');
+heading.innerHTML = "DOM<br>Is<br>Awesome"
+
 // Add images to page
 const ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src',siteContent['cta']['img-src']);
@@ -95,5 +99,7 @@ for (i = 0; i < mainContentValuesHeadings.length; i++) {
   h4[i].innerHTML = mainContentValuesHeadings[i];
   p[i].innerHTML = mainContentValuesContent[i];
 }
+
+
 
 
