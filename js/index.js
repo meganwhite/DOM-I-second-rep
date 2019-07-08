@@ -41,4 +41,22 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Add IDs to elements in the DOM
+const createID = (className, id) => {
+  document.querySelector(className).setAttribute('id',id);
+}
+
+createID('nav','top-nav');
+
+// Add content to elements using parents' IDs
+const renderElements = (obj, id) => {
+  let ListValues = Object.values(obj);
+  let parentID = document.getElementById(id);
+  for (i = 0; i < parentID.children.length; i++) {
+    parentID.children[i].innerHTML = ListValues[i];
+  }
+}
+
+renderElements(siteContent.nav,'top-nav');
+
 
