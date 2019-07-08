@@ -65,4 +65,8 @@ renderElements(siteContent.cta,'ctaText');
 renderElements(siteContent.contact,'contact');
 renderElements(siteContent.footer,'footer');
 
+// Add images to page
+const ctaImage = document.getElementById('cta-img');
+ctaImage.setAttribute('src',siteContent['cta']['img-src']);
+
 
