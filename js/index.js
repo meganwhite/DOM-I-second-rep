@@ -113,6 +113,32 @@ for (i = 0; i < mainContentValuesHeadings.length; i++) {
   p[i].innerHTML = mainContentValuesContent[i];
 }
 
+// Add Event Listener to button to change page background color
+let startButton = document.querySelector('button');
+
+const getRandomColor = () => {
+  let letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+const body = document.querySelector('body');
+
+startButton.addEventListener('click', function () {
+    body.style.background = getRandomColor();
+});
+
+let buttonText = ["Woah!","Cool!","Get Started","Hello!","Click here!","Click again!"]
+
+startButton.addEventListener('click', () => {
+  startButton.innerHTML = buttonText[Math.floor(Math.random() * 6)];
+})
+
+
+
 
 
 
